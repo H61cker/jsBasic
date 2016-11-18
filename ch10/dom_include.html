@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>dom include</title>
+	<script type="text/javascript">
+		/* 문서 객체 가져오기 */
+		/*
+			웹 페이지에 이미 존재하는 HTML 태그를 자바스크립트로 가져오는 방법에 대해서 알아본다.
+			getElementById(id) : 태그의 id 속성이 id와 일치하는 문서 객체를 가져온다.
+		*/
+
+		window.onload = function(){
+			var header1 = document.getElementById('header-1');
+			var header2 = document.getElementById('header-2');
+
+			// 문서 객체의 innerHTML 속성 변경
+			header1.innerHTML = 'with getElementById()';
+			header2.innerHTML = 'with getElementById()';
+		};
+	</script>
+</head>
+<body>
+	<h1 id="header-1">Header</h1>
+	<h1 id="header-2">Header</h1>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>closer</title>
+	<script type="text/javascript">
+		/*
+			문법 오류남.
+			함수 안에있는 지역변수를 외부에서 가져다 쓰려고 하니까.
+		*/
+		// function test(name){
+		// 	var output = 'Hello '+ name + ' .. !';
+		// }
+
+		// alert(output);
+
+		/* 해결 */
+		/*
+			변수를 남겨두는 현상을 클로저라고한다.
+		*/
+		function test(name){
+			var output = 'Hello ' + name + ' ..!';
+			return function () {
+				alert(output);
+			};
+		}
+
+		test('JavaScript')();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

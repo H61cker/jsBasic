@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>closer2</title>
+	<script type="text/javascript">
+		function test(name)
+		{
+			var output = 'Hello '+name+' ..!';
+			return function(){ alert(output); };
+		}
+
+		var test_1 = test('Web');
+		var test_2 = test('Javascript');
+
+		test_1();
+		test_2();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

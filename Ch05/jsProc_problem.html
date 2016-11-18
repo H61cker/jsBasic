@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jsProc_problem</title>
+	<script type="text/javascript">
+		/* 남아 있는 변수중에 0과 1 , 2는 이미 사라졌다. */
+		// for(var i=0; i<3; i++)
+		// {
+		// 	setTimeout(function(){alert(i);},0);
+		// }
+
+		// 해결 코드
+
+		for(var i=0; i<3; i++){
+			(function (closed_i){
+				setTimeout(function(){alert(closed_i);},0);
+			})(i);
+		}
+		
+		[0,1,2].forEach(function(i){
+			setTimeout(function(){
+				alert(i);
+			},0);
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>event handler</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			document.getElementById('header').onclick = function(){
+				// alert(this);
+
+				this.style.color = 'orange';
+				this.style.backgroundColor = 'red';
+				
+				// header.onclick = null;
+			};
+		}
+	</script>
+</head>
+<body>
+	<h1 id="header">Click me!</h1>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>dom include 2</title>
+	<script type="text/javascript">
+		/*
+			document 객체의 getElementById() 메서드는 한 번에 한 가지 문서 객체만 가져올 수 있다는.. 졸라 불편한 단점이 있다 ㅅ2ㅂ 
+
+			반면! document 객체가 가지는 메서드를 사용하면 한 번에 여러 개의 문서 객체를 가져올 수 있당.
+
+			getElementsByName(name) : 태그의 name 속성이 name과 일치하는 문서 객체를 배열로 가져온다.
+
+			getElementsByTagName(tagName) : tagName과 일치하는 문서 객체를 배열로 가져온다.
+		*/
+
+		window.onload = function(){
+			// 문서 객체를 가져온다.
+			var headers = document.getElementsByTagName('h1');
+
+			// 배열 headers 안에 있는 문서 객체를 사용할때 예시.
+			// 이 방법 너무 에바임. 동적이지가 않음. 정적임. 그래서 동적인 방법으로 해봄.
+			// headers[0].innerHTML = 'with getElementsByTagName()';
+			// headers[1].innerHTML = 'with getElementsByTagName()';
+
+			for( var i = 0; i<headers.length; i++ ){
+				// 문서 객체의 속성을 변경한다.
+				headers[i].innerHTML = 'with getElementsByTagName()';
+			}
+			
+		};
+	</script>
+</head>
+<body>
+	<h1>Header</h1>
+	<h1>Header</h1>
+</body>
+</html>

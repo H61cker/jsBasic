@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>text object 3</title>
+	<script type="text/javascript">
+		// innerHTML 속성을 사용한다. ( 더 쉽다나 뭐라나.. )
+
+		window.onload = function(){
+			// 변수를 선언한다.
+			var output = '';
+			output += '<ul>';
+			output += '	<li>JavaScript</li>';
+			output += '	<li>jQuery</li>';
+			output += '	<li>Ajax</li>';
+			output += '</ul>';
+			output += '<br><br><br>';
+			output += '<b> Documnet Object Model </b>'
+
+			// innerHTML 속성에 문자열을 할당한다.
+			document.body.innerHTML = output;
+		};
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>INDEX</title>
+	<script type="text/javascript">
+		/* 자바스크립트에서 이용할 수 있는 객체로 만들면 그것이 문서 객체이다.*/
+		window.onload = function(){
+			// var header = document.getElementById('header');
+			// 변수를 선언
+			var header = document.createElement('header'); // 요소 노드를 생성한다.
+			var textNode = document.createTextNode('Hello DOM'); // 텍스트 노드를 생성합니다.
+
+			// 노드를 연결한다.
+			header.appendChild(textNode); // 노드 연결
+			document.body.appendChild(header); // 바디에 header 를 연결해서 출력함.
+		};
+	</script>
+</head>
+<body>
+
+</body>
+</html>

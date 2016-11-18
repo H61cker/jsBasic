@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Location object</title>
+	<script type="text/javascript">
+	/*
+		location : 브라우저의 주소 표시줄과 관련된 객체임.
+
+		location 객체의 메서드
+			-assign(link) : 현재 위치를 이동합니다.
+			-reload() : 새로고침합니다.
+			-replace(link) : 현재 위치를 이동합니다.  
+	*/
+		var output = '';
+		for( var key in location ){
+			output += '*' + key + ': ' + location[key] + '\n';
+		}
+
+		alert(output);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

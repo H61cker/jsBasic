@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>event</title>
+	<script type="text/javascript">
+		/*
+			마우스 이벤트
+			키보드 이벤트
+			HTML 프레임 이벤트
+			HTML 입력 양식 이벤트
+			유저 인터페이스 이벤트
+			구조 변화 이벤트
+			터치 이벤트
+		*/
+
+		// 고전 이벤트 모델 : 문서 객체의 이벤트 속성으로 이벤트를 연결하는 방법.
+
+		/*
+			고전 이벤트 모델은 이벤트 하나에 이벤트 리스너 하나만 연결할 수 있다.
+		*/
+
+		window.onload = function(){
+			// 변수를 선언합니다.
+			var header = document.getElementById('header');
+
+			// 이벤트를 연결합니다.
+			header.onclick = function(){
+				alert('클릭');
+
+				// 이벤트를 제거합니다.
+				header.onclick = null;
+			};
+		}
+	</script>
+</head>
+<body>
+	<h1 id="header">클릭!</h1>
+</body>
+</html>

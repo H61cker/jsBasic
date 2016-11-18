@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>text object 2</title>
+	<script type="text/javascript">
+		
+		// 이미지 태그를 생성하고 body 문서 객체에 연결한다.
+		// 이 방법은 웹에서 지원해야하는데 지금은 지원안함...
+		// window.onload = function(){
+		// 	// 변수를 선언합니다.
+		// 	var img = document.createElement('img');
+		// 	img.src = 'Penguins.jpg';
+		// 	img.width = 500;
+		// 	img.height = 350;
+
+		// 	// 노드를 연결한다.
+		// 	document.body.appendChild(img);
+		// };
+
+		// 문서객체에 속성 메서드
+
+		window.onload = function(){
+			// 변수를 선언합니다.
+			var img = document.createElement('img');
+			// setAttribute 객체의 속성을 지정한다.
+			img.setAttribute('src','Penguins.jpg');
+			img.setAttribute('width',500);
+			img.setAttribute('height',350);
+
+			// getAttribute 객체의 속성을 가져온다.
+			img.setAttribute('data-property',350);
+
+			// 노드를 연결한다.
+			document.body.appendChild(img);
+		};
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>dom operation</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			// 문서 객체를 가져온다.
+			var header = document.getElementById('header');
+
+			// 문서 객체의 스타일을 바꿔줍니다.
+			header.style.border = '2px solid black';
+			header.style.color = 'orange';
+			header.style.fontFamily = 'helvetica';
+
+			// 문서 객체 제거
+			/*
+				removeChild(child) : 문서 객체의 자식 노드를 제거한다.
+			*/
+
+			// 문서 객체를 가져온다.
+			var willRemove = document.getElementById('will-remove');
+
+			// 문서 객체를 제거한다.
+			document.body.removeChild(willRemove);
+
+		};
+	</script>
+</head>
+<body>
+	<h1 id="header">Hello</h1>
+	<h1 id="will-remove">Header</h1>
+</body>
+</html>

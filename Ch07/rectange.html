@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>rectangle</title>
+	<script type="text/javascript">
+		/*
+			캡슐화 : 잘못 사용될 수 이쓴 객체의 특정 부분을 사용자가 사용할 수 없게 막는 기술.
+
+			get 형태의 메서드와 같이 값을 가져오는 메서드를 게터라고 함.
+			set 형태의 메서드와 같이 값을 입력하는 메서드를 세터라고 함.
+		*/
+
+		function Rectangle(w,h){
+			var width = w;
+			var height = h;
+
+			this.getWidth = function() { return width; };
+			this.getHeight = function() { return height; };
+			
+			this.setWidth = function(w){
+				if( w < 0 ){
+					throw '길이는 음수일 수 없습니다.';
+				}else{
+					width = w;
+				}
+			};
+
+			this.setHeight = function(h){
+				if( h < 0 ){
+					throw '길이는 음수일 수 없습니다.';
+				}else{
+					height = h;
+				}
+			};
+		}
+		function Square(length){
+			this.base = Rectangle;
+			this.base(length,length);
+		}
+
+		Square.prototype = Rectangle.prototype;
+		Square.prototype.constructor = Square;
+
+		Rectangle.prototype.getArea = function (){
+			return this.getWidth() * this.getHeight();
+		};
+
+		var rectangle = new Rectangle(5,7);
+		var square = new Square(5);
+		// rectangle.setWidth(-2);
+
+		alert(rectangle.getArea() + ' : ' + square.getArea());
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

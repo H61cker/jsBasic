@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>anonymous_fun</title>
+	<script type="text/javascript">
+		function callTentimes(callback)
+		{
+			for(var i=0; i<10; i++){
+				callback(i);
+			}
+		}
+
+		var calback = function(n){ alert('함수 호출'+' '+ n); };
+
+		callTentimes(calback);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

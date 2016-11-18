@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>in_func</title>
+	<script type="text/javascript">
+		/* 타이머 함수
+			: 특정한 시간에 특정한 함수를 실행할 수 있게 하는 함수임.
+		 */
+		 // setTimeout(function(){alert('3초가 지났습니다. ㅇㅂㅇ');},3000);
+		 var intervalID = setInterval(function(){
+		 	alert('<p>'+ new Date() + '</p>');
+		 },1000);
+
+		 setTimeout(function(){
+		 	// 타이머를 종료함.
+		 	clearInterval(intervalID);
+		 },10000);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

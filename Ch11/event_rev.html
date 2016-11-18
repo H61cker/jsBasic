@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>event relay</title>
+	<style type="text/css">
+		* { border: 3px solid black; }
+	</style>
+	<script type="text/javascript">
+		/*
+			이벤트가 자식 노드 순으로 실행된다.
+		*/	
+	</script>
+</head>
+<body>
+	<div onclick="alert('outer-div')">
+		<div onclick="alert('inner-div');">
+			<h1 onclick="alert('header');">
+				<p onclick="alert('pagagraph');">Pagagraph</p>
+			</h1>
+		</div>
+	</div>
+</body>
+</html>

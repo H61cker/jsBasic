@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>OPEN</title>
+</head>
+<body>
+<script type="text/javascript">
+/*
+	window 객체 : 새로운 window 객체를 생성.
+
+	window option 
+		height , width , location, menubar , resizable , status , toolbar
+*/
+	// window.open('http://www.naver.com','child','width=600, height=300',true);
+
+	var child = window.open('','','width=300, height=200');
+
+	child.moveTo(0,0);
+
+	// 1초마다 함수를 실행합니다.
+	setInterval(function(){
+		child.moveBy(10,10);
+	},1000);
+
+	if( child ){
+		child.document.write('<h1>From Parent Window</h1>');
+	}else{
+		alert('팝업 차단을 해제해주세요.');
+	}
+</script>
+</body>
+</html>

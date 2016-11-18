@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>with keyword</title>
+	<script type="text/javascript">
+		
+		var student = {
+			이름: '연하진',
+			국어 : 92, 수학: 98,
+			영어 : 96, 과학: 98
+		};
+
+		// width 키워드는 복잡하게 사용해야 하는 코드를 짧게 줄여주는 키워드임.
+		var output ='';
+		// outpt += '이름 : ' + student.이름 + '\n';
+		// outpt += '국어 : ' + student.국어 + '\n';
+		// outpt += '수학 : ' + student.수학 + '\n';
+		// outpt += '영어 : ' + student.영어 + '\n';
+		// outpt += '과학 : ' + student.과학 + '\n';
+
+		with(student){
+			output += '이름: ' + 이름 + '\n';
+			output += '국어: ' + 국어 + '\n';
+			output += '수학: ' + 수학 + '\n';
+			output += '영어: ' + 영어 + '\n';
+			output += '과학: ' + 과학 + '\n';
+			output += '총점 : ' + (국어+수학+영어+과학);
+		}
+
+		alert(output);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
